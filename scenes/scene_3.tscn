@@ -1,0 +1,897 @@
+[gd_scene format=3 uid="uid://ddp20adwqbxog"]
+
+[ext_resource type="Texture2D" uid="uid://beqjgkpim3xbd" path="res://assets/backgrounds/Scene 1.png" id="1_lon35"]
+[ext_resource type="Script" uid="uid://dd4b0523g34mi" path="res://scenes/scene_3.gd" id="1_r2pi8"]
+[ext_resource type="PackedScene" uid="uid://b1yt0prwlu3wm" path="res://player/samuel.tscn" id="2_cjh3u"]
+[ext_resource type="Texture2D" uid="uid://d3dt2nev3lqsx" path="res://icon.svg" id="3_xcvhn"]
+[ext_resource type="FontFile" uid="uid://bbchvx2mh7yc" path="res://assets/fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_toq7q"]
+[ext_resource type="Texture2D" uid="uid://dpxfqw6jdfabc" path="res://assets/popups/popup.png" id="5_r2pi8"]
+[ext_resource type="FontFile" uid="uid://cqptm7jmtnhk5" path="res://assets/fonts/Silkscreen/Silkscreen-Bold.ttf" id="6_lmrsu"]
+[ext_resource type="Texture2D" uid="uid://dthyv2qs86kri" path="res://assets/logo/logobank.png" id="7_lmrsu"]
+[ext_resource type="Texture2D" uid="uid://ccttonv1aol6c" path="res://assets/popups/checklist.png" id="9_087sr"]
+[ext_resource type="Script" uid="uid://c8w0ch4afubuu" path="res://scenes/answerinput.gd" id="10_63cu2"]
+[ext_resource type="Script" uid="uid://7kt8grgcjsto" path="res://scenes/verifyidentity.gd" id="10_gmcgl"]
+[ext_resource type="Texture2D" uid="uid://dxl3fwajypfj2" path="res://assets/popups/x.png" id="12_5uf0h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uj04i"]
+size = Vector2(1150, 77)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uj04i"]
+bg_color = Color(0.9558837, 0.9487534, 0.94385, 1)
+shadow_color = Color(0, 0, 0, 0.9019608)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ey11"]
+bg_color = Color(0.6, 0.6, 0.6, 0.007843138)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37lg0"]
+bg_color = Color(0.6, 0.6, 0.6, 0.19215687)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hecbn"]
+bg_color = Color(0.6, 0.6, 0.6, 0.34117648)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxsw8"]
+bg_color = Color(0.526434, 0.22278446, 0.28188267, 1)
+shadow_color = Color(0, 0, 0, 0.827451)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5viw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jc63w"]
+bg_color = Color(0.6, 0.6, 0.6, 0.23529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7h7mn"]
+bg_color = Color(0.6, 0.6, 0.6, 0.53333336)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7072"]
+bg_color = Color(0.95536214, 0.95274514, 0.9487551, 1)
+shadow_color = Color(0, 0, 0, 0.8235294)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpupq"]
+bg_color = Color(0.6, 0.6, 0.6, 0.015686275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0udnx"]
+bg_color = Color(0.6, 0.6, 0.6, 0.24705882)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2uf65"]
+bg_color = Color(0.6, 0.6, 0.6, 0.5019608)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63cu2"]
+bg_color = Color(0.96278876, 0.95789057, 0.9551812, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmcgl"]
+bg_color = Color(0.37251547, 0.7105337, 0.2579941, 0.7176471)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5uf0h"]
+bg_color = Color(0.25764075, 0.3749795, 0.55008864, 0.98039216)
+shadow_color = Color(0, 0, 0, 0.92156863)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gm7q5"]
+bg_color = Color(0.6, 0.6, 0.6, 0.003921569)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2rqdi"]
+bg_color = Color(0.6, 0.6, 0.6, 0.23529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8d8pf"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnr1l"]
+bg_color = Color(0.9607843, 0.9764706, 0.92941177, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8f85w"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_63cu2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6f48"]
+bg_color = Color(1, 0.38538128, 0.28075647, 0.7176471)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pl5ms"]
+bg_color = Color(0.6431373, 0.7019608, 0.7882353, 0.6509804)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsd5d"]
+bg_color = Color(0.26652324, 0.3658732, 0.4944076, 1)
+shadow_color = Color(0, 0, 0, 0.98039216)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cuwey"]
+bg_color = Color(0.6, 0.6, 0.6, 0.015686275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw7mx"]
+bg_color = Color(0.6, 0.6, 0.6, 0.1764706)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t5e5o"]
+bg_color = Color(0.6, 0.6, 0.6, 0.47058824)
+
+[node name="scene3" type="Control" unique_id=1053450266]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r2pi8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=218545955]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lon35")
+expand_mode = 1
+
+[node name="samuel" parent="." unique_id=694367078 instance=ExtResource("2_cjh3u")]
+texture_filter = 1
+position = Vector2(-134, -405.00003)
+scale = Vector2(1.5, 1.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1333334065]
+position = Vector2(359, 636)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1628968097]
+visible = false
+texture = ExtResource("3_xcvhn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=60516815]
+position = Vector2(216, -28.5)
+shape = SubResource("RectangleShape2D_uj04i")
+
+[node name="popup1bank" type="Panel" parent="." unique_id=394748529]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -300.0
+offset_bottom = 87.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uj04i")
+
+[node name="Logobank" type="Sprite2D" parent="popup1bank" unique_id=525438890]
+position = Vector2(39, 42)
+texture = ExtResource("7_lmrsu")
+
+[node name="nusabank" type="Label" parent="popup1bank" unique_id=1925900463]
+texture_filter = 1
+layout_mode = 0
+offset_left = 81.0
+offset_top = 9.0
+offset_right = 189.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.16816768, 0.23286855, 0.3863293, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.45882353)
+theme_override_fonts/font = ExtResource("4_toq7q")
+text = "Nusa bank"
+
+[node name="securityalert" type="Label" parent="popup1bank" unique_id=974090301]
+texture_filter = 1
+layout_mode = 0
+offset_left = 82.0
+offset_top = 35.0
+offset_right = 295.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(0.6987175, 0.28149214, 0.3118338, 1)
+theme_override_fonts/font = ExtResource("4_toq7q")
+theme_override_font_sizes/font_size = 18
+text = "security alert !!"
+
+[node name="Buttonpopup1" type="Button" parent="popup1bank" unique_id=1287591469]
+layout_mode = 0
+offset_right = 299.0
+offset_bottom = 100.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_4ey11")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_37lg0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hecbn")
+
+[node name="panelpopup2" type="Control" parent="." unique_id=475356171]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="panelpopup2" unique_id=1112608722]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -334.5
+offset_top = -213.5
+offset_right = 334.5
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_r2pi8")
+
+[node name="title" type="Label" parent="panelpopup2" unique_id=945475603]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.375
+anchor_top = -3.5500002
+anchor_right = -4.375
+anchor_bottom = -3.5500002
+offset_left = -64.0
+offset_top = -27.0
+offset_right = 98.0
+offset_bottom = 4.0
+theme_override_fonts/font = ExtResource("4_toq7q")
+theme_override_font_sizes/font_size = 24
+text = "nusa bank"
+
+[node name="Logobank" type="Sprite2D" parent="panelpopup2" unique_id=1735832187]
+position = Vector2(-279.00003, -152.00002)
+scale = Vector2(0.734375, 0.734375)
+texture = ExtResource("7_lmrsu")
+
+[node name="title2" type="Label" parent="panelpopup2" unique_id=504117656]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.375
+anchor_top = -3.5500002
+anchor_right = -4.375
+anchor_bottom = -3.5500002
+offset_left = -99.0
+offset_top = 74.0
+offset_right = 239.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0.16816768, 0.23286855, 0.3863293, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.30588236)
+theme_override_fonts/font = ExtResource("6_lmrsu")
+theme_override_font_sizes/font_size = 20
+text = "Unusual activity detected"
+
+[node name="securityalert" type="Label" parent="panelpopup2" unique_id=1660648278]
+texture_filter = 1
+layout_mode = 0
+offset_left = -273.0
+offset_top = -94.0
+offset_right = -190.0
+offset_bottom = -71.0
+theme_override_colors/font_color = Color(0.571099, 0.32599145, 0.3444798, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.31764707)
+theme_override_font_sizes/font_size = 13
+text = "security alert"
+
+[node name="text" type="Label" parent="panelpopup2" unique_id=1568308023]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.23700002
+anchor_top = 0.5
+anchor_right = 0.23700002
+anchor_bottom = 0.5
+offset_left = -282.48
+offset_top = -31.0
+offset_right = 282.52
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.09803922, 0.14509805, 0.2509804, 0.8901961)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.3529412)
+theme_override_fonts/font = ExtResource("4_toq7q")
+theme_override_font_sizes/font_size = 14
+text = "we noticed a recent login attempt from an unfamiliar device. 
+
+to keep your account secure, please verify your identify."
+
+[node name="verifypanel" type="Panel" parent="panelpopup2" unique_id=1681993544]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.462
+anchor_top = 3.5500002
+anchor_right = 0.462
+anchor_bottom = 3.5500002
+offset_left = -298.48
+offset_top = -26.0
+offset_right = 298.52
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uxsw8")
+
+[node name="verifytext" type="Label" parent="panelpopup2/verifypanel" unique_id=554497166]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.5
+offset_top = -11.5
+offset_right = 53.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9590414, 0.955159, 0.95316654, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.40784314)
+theme_override_fonts/font = ExtResource("4_toq7q")
+text = "verify anyway"
+
+[node name="verifybutton" type="Button" parent="panelpopup2/verifypanel" unique_id=102873442]
+layout_mode = 0
+offset_right = 597.0
+offset_bottom = 51.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_p5viw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jc63w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7h7mn")
+
+[node name="reportpanel" type="Panel" parent="panelpopup2" unique_id=730686018]
+layout_mode = 0
+offset_left = -278.0
+offset_top = 189.0
+offset_right = 318.0
+offset_bottom = 239.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q7072")
+
+[node name="reporttext" type="Label" parent="panelpopup2/reportpanel" unique_id=1557710149]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -11.5
+offset_right = 42.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.64739496, 0.647395, 0.6473949, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.94509804)
+theme_override_fonts/font = ExtResource("4_toq7q")
+text = "report text"
+
+[node name="reportbutton" type="Button" parent="panelpopup2/reportpanel" unique_id=641437249]
+layout_mode = 0
+offset_right = 595.0
+offset_bottom = 50.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_vpupq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0udnx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2uf65")
+
+[node name="smartmovepanel" type="Panel" parent="." unique_id=926469867]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.0
+offset_top = -166.5
+offset_right = 243.0
+offset_bottom = 166.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_63cu2")
+
+[node name="checkpanel" type="Panel" parent="smartmovepanel" unique_id=1417093697]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49500003
+anchor_top = 0.215
+anchor_right = 0.49500003
+anchor_bottom = 0.215
+offset_left = -36.570023
+offset_top = -34.095
+offset_right = 36.429977
+offset_bottom = 34.405
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gmcgl")
+
+[node name="Checklist" type="Sprite2D" parent="smartmovepanel/checkpanel" unique_id=1537193340]
+position = Vector2(39, 31)
+scale = Vector2(0.984375, 1.203125)
+texture = ExtResource("9_087sr")
+
+[node name="smartmovetext" type="Label" parent="smartmovepanel" unique_id=176740165]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.46500003
+anchor_right = 0.5
+anchor_bottom = 0.46500003
+offset_left = -73.0
+offset_top = -14.3450165
+offset_right = 80.0
+offset_bottom = 8.6549835
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.17254902, 0.25882354, 0.39215687, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.18039216)
+theme_override_fonts/font = ExtResource("6_lmrsu")
+theme_override_font_sizes/font_size = 17
+text = "SMART MOVE."
+
+[node name="text" type="Label" parent="smartmovepanel" unique_id=1019995807]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="continuepanel" type="Panel" parent="smartmovepanel" unique_id=1735314026]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -171.0
+offset_top = -99.5
+offset_right = 171.0
+offset_bottom = -50.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5uf0h")
+
+[node name="continue" type="Label" parent="smartmovepanel/continuepanel" unique_id=2100711850]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -11.5
+offset_right = 41.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95276207, 0.9457632, 0.9419831, 1)
+theme_override_fonts/font = ExtResource("4_toq7q")
+text = "CONTINUE"
+
+[node name="Button4" type="Button" parent="smartmovepanel/continuepanel" unique_id=48211449]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 342.0
+offset_bottom = 50.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gm7q5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2rqdi")
+
+[node name="verifyidentity" type="Control" parent="." unique_id=854611025]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_gmcgl")
+
+[node name="Panel" type="Panel" parent="verifyidentity" unique_id=168942511]
+layout_mode = 0
+offset_left = -339.0
+offset_top = -188.0
+offset_right = 353.0
+offset_bottom = 224.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8d8pf")
+
+[node name="box" type="Panel" parent="verifyidentity/Panel" unique_id=192689314]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 1.5910001
+offset_left = 200.0
+offset_top = 285.0
+offset_right = 481.0
+offset_bottom = -284.492
+theme_override_styles/panel = SubResource("StyleBoxFlat_xnr1l")
+
+[node name="answerinput" type="LineEdit" parent="verifyidentity/Panel/box" unique_id=1646115920 node_paths=PackedStringArray("verifyidentity", "consequens")]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 14.0
+offset_right = 268.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.4392157)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_8f85w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_63cu2")
+placeholder_text = "000000"
+alignment = 1
+max_length = 6
+virtual_keyboard_type = 2
+script = ExtResource("10_63cu2")
+verifyidentity = NodePath("../../..")
+consequens = NodePath("../../../../consequens")
+
+[node name="Logobank" type="Sprite2D" parent="verifyidentity/Panel" unique_id=1478898414]
+position = Vector2(40.75, 39.25)
+scale = Vector2(1.0078127, 0.99218756)
+texture = ExtResource("7_lmrsu")
+
+[node name="Nusa Bank\\" type="Label" parent="verifyidentity/Panel" unique_id=139828166]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.9250002
+anchor_top = -3.15
+anchor_right = -3.9250002
+anchor_bottom = -3.15
+offset_left = 2798.1
+offset_top = 1304.8
+offset_right = 3119.1
+offset_bottom = 1335.8
+theme_override_colors/font_color = Color(0.21176471, 0.24705882, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("4_toq7q")
+theme_override_font_sizes/font_size = 24
+text = "Nusa Bank"
+
+[node name="verify" type="Label" parent="verifyidentity/Panel" unique_id=2048674722]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.9250002
+anchor_top = -3.15
+anchor_right = -3.9250002
+anchor_bottom = -3.15
+offset_left = 2728.1
+offset_top = 1415.8
+offset_right = 3049.1
+offset_bottom = 1446.8
+theme_override_colors/font_color = Color(0.21176471, 0.24705882, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("4_toq7q")
+theme_override_font_sizes/font_size = 24
+text = "Verify your identity"
+
+[node name="indetify" type="Label" parent="verifyidentity/Panel" unique_id=39425504]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.45
+anchor_top = -1.437
+anchor_right = -3.45
+anchor_bottom = -1.437
+offset_left = 2403.4001
+offset_top = 684.044
+offset_right = 2533.4001
+offset_bottom = 707.044
+theme_override_colors/font_color = Color(0.7100115, 0.26400474, 0.36184695, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.20392157)
+theme_override_fonts/font = ExtResource("4_toq7q")
+theme_override_font_sizes/font_size = 14
+text = "identity check"
+
+[node name="text" type="Label" parent="verifyidentity/Panel" unique_id=1738828765]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 140.0
+offset_right = 281.0
+offset_bottom = 164.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toq7q")
+
+[node name="securitycheck" type="Label" parent="verifyidentity/Panel" unique_id=1289463333]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 38.0
+offset_right = 610.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0, 0, 0, 0.39215687)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("6_lmrsu")
+theme_override_font_sizes/font_size = 14
+text = "security check"
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="text2" type="Label" parent="verifyidentity/Panel" unique_id=102477311]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 162.0
+offset_right = 543.0
+offset_bottom = 201.0
+theme_override_colors/font_color = Color(0, 0, 0, 0.39215687)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("6_lmrsu")
+theme_override_font_sizes/font_size = 14
+text = "enter the verification code	 sent to your registered device"
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="text3" type="Label" parent="verifyidentity/Panel" unique_id=1160228261]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 234.0
+offset_right = 444.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("6_lmrsu")
+theme_override_font_sizes/font_size = 16
+text = "verification code"
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="xpanel" type="Panel" parent="verifyidentity" unique_id=1627525832]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49500003
+anchor_top = 0.215
+anchor_right = 0.49500003
+anchor_bottom = 0.215
+offset_left = 260.2
+offset_top = -179.6
+offset_right = 307.2
+offset_bottom = -130.6
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i6f48")
+
+[node name="xbut" type="Button" parent="verifyidentity/xpanel" unique_id=283820399]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 46.0
+offset_bottom = 48.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_4ey11")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_37lg0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hecbn")
+
+[node name="X" type="Sprite2D" parent="verifyidentity/xpanel" unique_id=148411981]
+position = Vector2(24, 23)
+scale = Vector2(0.773438, 0.74999994)
+texture = ExtResource("12_5uf0h")
+
+[node name="otpcode" type="Panel" parent="verifyidentity" unique_id=961276104]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 256.0
+offset_top = -304.0
+offset_right = 556.0
+offset_bottom = -217.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uj04i")
+
+[node name="Logobank" type="Sprite2D" parent="verifyidentity/otpcode" unique_id=155216673]
+position = Vector2(39, 42)
+texture = ExtResource("7_lmrsu")
+
+[node name="nusabank" type="Label" parent="verifyidentity/otpcode" unique_id=400711054]
+texture_filter = 1
+layout_mode = 0
+offset_left = 81.0
+offset_top = 9.0
+offset_right = 189.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.16816768, 0.23286855, 0.3863293, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.45882353)
+theme_override_fonts/font = ExtResource("4_toq7q")
+text = "Nusa bank"
+
+[node name="securityalert" type="Label" parent="verifyidentity/otpcode" unique_id=2035785034]
+texture_filter = 1
+layout_mode = 0
+offset_left = 80.0
+offset_top = 34.0
+offset_right = 300.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toq7q")
+theme_override_font_sizes/font_size = 12
+text = "Do not share this otp code
+"
+
+[node name="securityalert2" type="Label" parent="verifyidentity/otpcode" unique_id=1381107224]
+texture_filter = 1
+layout_mode = 0
+offset_left = 78.0
+offset_top = 48.0
+offset_right = 298.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toq7q")
+theme_override_font_sizes/font_size = 26
+text = "160527
+"
+
+[node name="consequens" type="Control" parent="." unique_id=747156525]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="securitybreach" type="TextureRect" parent="consequens" unique_id=370871284]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -227.0
+offset_right = 311.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_r2pi8")
+expand_mode = 1
+
+[node name="feed" type="Label" parent="consequens" unique_id=1938222922]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.9250002
+anchor_top = -3.15
+anchor_right = -3.9250002
+anchor_bottom = -3.15
+offset_left = -110.0
+offset_top = -68.0
+offset_right = 31.0
+offset_bottom = -35.0
+theme_override_fonts/font = ExtResource("4_toq7q")
+theme_override_font_sizes/font_size = 25
+text = "Feedback"
+
+[node name="breach" type="Label" parent="consequens" unique_id=526966274]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.45
+anchor_top = -1.437
+anchor_right = -3.45
+anchor_bottom = -1.437
+offset_left = -105.0
+offset_top = -62.519997
+offset_right = 40.0
+offset_bottom = -39.519997
+theme_override_colors/font_color = Color(0.7100115, 0.26400474, 0.36184695, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.20392157)
+theme_override_fonts/font = ExtResource("4_toq7q")
+theme_override_font_sizes/font_size = 14
+text = "Security Breach"
+
+[node name="exposed" type="Label" parent="consequens" unique_id=1158799356]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.537
+anchor_bottom = -0.537
+offset_left = -244.0
+offset_top = -68.520004
+offset_right = 152.0
+offset_bottom = -45.52
+theme_override_colors/font_color = Color(0.21354806, 0.2485187, 0.37525222, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.18431373)
+theme_override_fonts/font = ExtResource("6_lmrsu")
+text = "Your information was exposed"
+
+[node name="text" type="Label" parent="consequens" unique_id=519555612]
+layout_mode = 0
+offset_left = -226.0
+offset_top = -48.0
+offset_right = -58.0
+offset_bottom = -24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_toq7q")
+
+[node name="reminder" type="Panel" parent="consequens" unique_id=609127127]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 2.0500002
+anchor_right = 0.5
+anchor_bottom = 2.0500002
+offset_left = -261.0
+offset_top = -124.00001
+offset_right = 273.0
+offset_bottom = -9.000008
+theme_override_styles/panel = SubResource("StyleBoxFlat_pl5ms")
+
+[node name="titlereminder" type="Label" parent="consequens/reminder" unique_id=219696073]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label" type="Label" parent="consequens/reminder" unique_id=1060154860]
+texture_filter = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 58.0
+offset_right = 531.0
+offset_bottom = 97.0
+theme_override_colors/font_color = Color(0.007843138, 0.003921569, 0.007843138, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_toq7q")
+theme_override_font_sizes/font_size = 14
+text = "never enter an otp on a link you didn't verify. open your banking app directly instead"
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="consequens/reminder/Label" unique_id=739133771]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -51.0
+offset_right = 524.0
+offset_bottom = -12.0
+theme_override_colors/font_color = Color(0.007843138, 0.003921569, 0.007843138, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("6_lmrsu")
+theme_override_font_sizes/font_size = 14
+text = "what should you remember?"
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="continuejourney" type="Panel" parent="consequens" unique_id=559206025]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 1.5910001
+offset_left = -239.0
+offset_top = 95.0
+offset_right = 291.0
+offset_bottom = 71.36
+theme_override_styles/panel = SubResource("StyleBoxFlat_wsd5d")
+
+[node name="text" type="Label" parent="consequens/continuejourney" unique_id=1057342542]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -11.5
+offset_right = 66.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5058824)
+theme_override_fonts/font = ExtResource("4_toq7q")
+text = "continue journey"
+
+[node name="Button3" type="Button" parent="consequens/continuejourney" unique_id=1969800934]
+layout_mode = 0
+offset_right = 530.0
+offset_bottom = 41.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_cuwey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yw7mx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t5e5o")
+
+[connection signal="pressed" from="popup1bank/Buttonpopup1" to="." method="_on_buttonpopup_1_pressed"]
+[connection signal="ready" from="popup1bank/Buttonpopup1" to="." method="_on_buttonpopup_1_ready"]
+[connection signal="pressed" from="panelpopup2/verifypanel/verifybutton" to="." method="_on_verifybutton_pressed"]
+[connection signal="pressed" from="panelpopup2/reportpanel/reportbutton" to="." method="_on_reportbutton_pressed"]
+[connection signal="pressed" from="smartmovepanel/continuepanel/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="verifyidentity/xpanel/xbut" to="." method="_on_xbut_pressed"]
+[connection signal="pressed" from="consequens/continuejourney/Button3" to="." method="_on_button_3_pressed"]

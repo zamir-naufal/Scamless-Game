@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dpxfqw6jdfabc" path="res://assets/popups/popup.png" id="4_sj5te"]
 [ext_resource type="Texture2D" uid="uid://cdfjubt87eviu" path="res://assets/logo/scamlesslogo.png" id="4_t6bmd"]
 [ext_resource type="FontFile" uid="uid://cqptm7jmtnhk5" path="res://assets/fonts/Silkscreen/Silkscreen-Bold.ttf" id="5_lki8s"]
+[ext_resource type="PackedScene" uid="uid://b1yt0prwlu3wm" path="res://player/samuel.tscn" id="7_d7a6c"]
+[ext_resource type="Texture2D" uid="uid://d3dt2nev3lqsx" path="res://icon.svg" id="8_g2j0d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjll7"]
 
@@ -48,6 +50,9 @@ corner_radius_top_left = 3
 corner_radius_top_right = 1
 corner_radius_bottom_right = 1
 corner_radius_bottom_left = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2j0d"]
+size = Vector2(1150, 98)
 
 [node name="scene1" type="Control" unique_id=318029577]
 layout_mode = 3
@@ -182,6 +187,10 @@ offset_right = 43.0
 offset_bottom = 25.0
 texture = ExtResource("4_t6bmd")
 expand_mode = 1
+
+[node name="samuel" parent="." unique_id=694367078 instance=ExtResource("7_d7a6c")]
+position = Vector2(-114, -385)
+scale = Vector2(1.5, 1.5)
 
 [node name="panelpopup2" type="Control" parent="." unique_id=1125961558]
 visible = false
@@ -415,6 +424,18 @@ offset_right = -199.0
 offset_bottom = 92.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_jc63w")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1193674565]
+position = Vector2(386, 651)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1935682015]
+visible = false
+texture = ExtResource("8_g2j0d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1234626938]
+position = Vector2(188, -14)
+shape = SubResource("RectangleShape2D_g2j0d")
+
 [connection signal="pressed" from="popup1/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="panelpopup2/startjourneypanel/Button2" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="panelpopup2/startjourneypanel/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="panelpopup2/startjourneypanel/Button2" to="." method="_on_button_pressed"]

@@ -7,6 +7,8 @@
 [ext_resource type="FontFile" uid="uid://bbchvx2mh7yc" path="res://assets/fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_ccscm"]
 [ext_resource type="FontFile" uid="uid://cqptm7jmtnhk5" path="res://assets/fonts/Silkscreen/Silkscreen-Bold.ttf" id="5_yun4j"]
 [ext_resource type="Texture2D" uid="uid://dpxfqw6jdfabc" path="res://assets/popups/popup.png" id="7_qo03w"]
+[ext_resource type="Texture2D" uid="uid://b0ecgsbqt7gfd" path="res://assets/qrcode/pemindai.png" id="8_is556"]
+[ext_resource type="Texture2D" uid="uid://ccttonv1aol6c" path="res://assets/popups/checklist.png" id="9_ul8a6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uj04i"]
 size = Vector2(1150, 98)
@@ -16,6 +18,62 @@ bg_color = Color(0.6, 0.6, 0.6, 0.007843138)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5viw"]
 size = Vector2(131, 93)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5viw"]
+bg_color = Color(0.627451, 0.20392157, 0.2901961, 1)
+shadow_color = Color(0, 0, 0, 0.92156863)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpupq"]
+bg_color = Color(0.6, 0.6, 0.6, 0.007843138)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0udnx"]
+bg_color = Color(0.6, 0.6, 0.6, 0.27450982)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jc63w"]
+bg_color = Color(0.84993285, 0.83160955, 0.8129649, 1)
+shadow_color = Color(0, 0, 0, 0.88235295)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2uf65"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxsw8"]
+bg_color = Color(0.6, 0.6, 0.6, 0.18039216)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sffar"]
+bg_color = Color(0.6431373, 0.7019608, 0.7882353, 0.6509804)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cjm0y"]
+bg_color = Color(0.26652324, 0.3658732, 0.4944076, 1)
+shadow_color = Color(0, 0, 0, 0.98039216)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ul8a6"]
+bg_color = Color(0.6, 0.6, 0.6, 0.015686275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_41217"]
+bg_color = Color(0.6, 0.6, 0.6, 0.1764706)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nb8vq"]
+bg_color = Color(0.6, 0.6, 0.6, 0.47058824)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03hge"]
+bg_color = Color(0.96278876, 0.95789057, 0.9551812, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w20tv"]
+bg_color = Color(0.48235294, 0.67058825, 0.5058824, 0.7176471)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mr5mp"]
+bg_color = Color(0.25764075, 0.3749795, 0.55008864, 0.98039216)
+shadow_color = Color(0, 0, 0, 0.92156863)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7u8qs"]
+bg_color = Color(0.6, 0.6, 0.6, 0.003921569)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rrstb"]
+bg_color = Color(0.6, 0.6, 0.6, 0.23529412)
 
 [node name="scene2" type="Control" unique_id=1204856967]
 layout_mode = 3
@@ -31,11 +89,17 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 7.0
+offset_right = -2.0
+offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_xe0r6")
 
 [node name="samuel" parent="." unique_id=2075155012 instance=ExtResource("2_vsrvg")]
+position = Vector2(-145, -323)
+scale = Vector2(1.5, 1.5)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1144754780]
 position = Vector2(387, 712)
@@ -71,7 +135,7 @@ offset_right = 42.0
 offset_bottom = 10.9999695
 theme_override_fonts/font = ExtResource("4_ccscm")
 theme_override_font_sizes/font_size = 10
-text = "pay now"
+text = "show qr code"
 
 [node name="buy1ketoprak" type="Button" parent="CanvasLayer/ui" unique_id=486351298]
 visible = false
@@ -114,18 +178,479 @@ position = Vector2(671, 525)
 shape = SubResource("RectangleShape2D_p5viw")
 
 [node name="qrpopup" type="Control" parent="." unique_id=804283808]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="qrpopup" unique_id=1820382081]
+[node name="popuppanel" type="TextureRect" parent="qrpopup" unique_id=1820382081]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -257.0
+offset_right = 124.0
+offset_bottom = 263.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_qo03w")
+expand_mode = 1
+
+[node name="qris" type="TextureRect" parent="qrpopup/popuppanel" unique_id=630525763]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.45600003
+anchor_right = 0.5
+anchor_bottom = 0.45600003
+offset_left = -56.0
+offset_top = -60.12001
+offset_right = 51.0
+offset_bottom = 59.87999
+texture = ExtResource("8_is556")
+expand_mode = 1
+
+[node name="####" type="Label" parent="qrpopup" unique_id=618416482]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.5800002
+anchor_top = -5.7860003
+anchor_right = 2.5800002
+anchor_bottom = -5.7860003
+offset_left = -177.20001
+offset_top = 24.440002
+offset_right = -131.20001
+offset_bottom = 47.440002
+theme_override_font_sizes/font_size = 20
+text = "####"
+
+[node name="paymentrequest" type="Label" parent="qrpopup" unique_id=768097205]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -2.437
+anchor_right = 0.5
+anchor_bottom = -2.437
+offset_left = -85.0
+offset_top = -23.519997
+offset_right = 87.0
+offset_bottom = -2.5199966
+theme_override_colors/font_color = Color(0.14430788, 0.20265672, 0.29122397, 1)
+theme_override_fonts/font = ExtResource("4_ccscm")
+text = "PAYMENT REQUEST"
+
+[node name="harga" type="Label" parent="qrpopup" unique_id=50755621]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.26200002
+anchor_top = -1.187
+anchor_right = 0.26200002
+anchor_bottom = -1.187
+offset_left = -50.480003
+offset_top = -42.519997
+offset_right = 61.519997
+offset_bottom = -19.519997
+theme_override_colors/font_color = Color(0.14430788, 0.20265672, 0.29122397, 1)
+theme_override_fonts/font = ExtResource("5_yun4j")
+text = "Rp 15.000"
+
+[node name="merchant" type="Label" parent="qrpopup" unique_id=31978967]
+texture_filter = 1
+layout_mode = 0
+offset_left = -85.0
+offset_top = 60.0
+offset_right = 91.0
+offset_bottom = 177.0
+theme_override_colors/font_color = Color(0.14430788, 0.20265672, 0.29122397, 1)
+theme_override_fonts/font = ExtResource("4_ccscm")
+theme_override_font_sizes/font_size = 13
+text = "Merchant          
+-unknown-
+
+order id
+#SCM-1234"
+
+[node name="amount" type="Label" parent="qrpopup" unique_id=1445811160]
 layout_mode = 0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.14430788, 0.20265672, 0.29122397, 1)
+theme_override_fonts/font = ExtResource("4_ccscm")
+
+[node name="paynow" type="Panel" parent="qrpopup" unique_id=1884495631]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.512
+anchor_top = 4.8370004
+anchor_right = 0.512
+anchor_bottom = 4.8370004
+offset_left = -103.48
+offset_top = -17.480011
+offset_right = 103.52
+offset_bottom = 17.519989
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p5viw")
+
+[node name="textpaynow" type="Label" parent="qrpopup/paynow" unique_id=594418342]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.5
+offset_top = -8.0
+offset_right = 32.5
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.22352941)
+theme_override_fonts/font = ExtResource("5_yun4j")
+theme_override_font_sizes/font_size = 12
+text = "pay now"
+
+[node name="Button1" type="Button" parent="qrpopup/paynow" unique_id=251281707]
+layout_mode = 0
+offset_right = 207.0
+offset_bottom = 36.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_vpupq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0udnx")
+
+[node name="check" type="Panel" parent="qrpopup" unique_id=1007599371]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = 223.0
+offset_right = 123.0
+offset_bottom = 218.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jc63w")
+
+[node name="checkmerchanttext" type="Label" parent="qrpopup/check" unique_id=1720765714]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = -8.0
+offset_right = 61.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.18617779, 0.19395563, 0.2680358, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.28235295)
+theme_override_fonts/font = ExtResource("4_ccscm")
+theme_override_font_sizes/font_size = 12
+text = "check merchant"
+
+[node name="Button2" type="Button" parent="qrpopup/check" unique_id=137965011]
+layout_mode = 0
+offset_right = 207.0
+offset_bottom = 35.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_2uf65")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uxsw8")
+
+[node name="moneylost" type="Control" parent="." unique_id=1359863914]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="popuppayment" type="TextureRect" parent="moneylost" unique_id=628629464]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -227.0
+offset_right = 311.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("7_qo03w")
+expand_mode = 1
+
+[node name="####" type="Label" parent="moneylost" unique_id=1233276710]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.9250002
+anchor_top = -3.15
+anchor_right = -3.9250002
+anchor_bottom = -3.15
+offset_left = -87.0
+offset_top = -53.0
+offset_right = -17.0
+offset_bottom = -27.0
+theme_override_fonts/font = ExtResource("4_ccscm")
+theme_override_font_sizes/font_size = 20
+text = "Feedback"
+
+[node name="moneylost" type="Label" parent="moneylost" unique_id=1731412455]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.45
+anchor_top = -1.437
+anchor_right = -3.45
+anchor_bottom = -1.437
+offset_left = -105.0
+offset_top = -50.519997
+offset_right = 11.0
+offset_bottom = -27.519997
+theme_override_colors/font_color = Color(0.7100115, 0.26400474, 0.36184695, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.20392157)
+theme_override_fonts/font = ExtResource("4_ccscm")
+theme_override_font_sizes/font_size = 14
+text = "money lost"
+
+[node name="titlemoneylost" type="Label" parent="moneylost" unique_id=753190287]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.537
+anchor_bottom = -0.537
+offset_left = -244.0
+offset_top = -56.52
+offset_right = 152.0
+offset_bottom = -33.52
+theme_override_colors/font_color = Color(0.21354806, 0.2485187, 0.37525222, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.18431373)
+theme_override_fonts/font = ExtResource("5_yun4j")
+text = "that payment went to a scammer."
+
+[node name="text" type="Label" parent="moneylost" unique_id=1003184069]
+layout_mode = 0
+offset_left = -226.0
+offset_top = -48.0
+offset_right = -58.0
+offset_bottom = -24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ccscm")
+
+[node name="reminder" type="Panel" parent="moneylost" unique_id=1230032793]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 2.0500002
+anchor_right = 0.5
+anchor_bottom = 2.0500002
+offset_left = -261.0
+offset_top = -124.00001
+offset_right = 273.0
+offset_bottom = -9.000008
+theme_override_styles/panel = SubResource("StyleBoxFlat_sffar")
+
+[node name="titlereminder" type="Label" parent="moneylost/reminder" unique_id=1772607377]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label" type="Label" parent="moneylost/reminder" unique_id=914875935]
+texture_filter = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 58.0
+offset_right = 531.0
+offset_bottom = 97.0
+theme_override_colors/font_color = Color(0.007843138, 0.003921569, 0.007843138, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("4_ccscm")
+theme_override_font_sizes/font_size = 14
+text = "Always check the merchant name. If it's suspicious make sure to double check it with the merchant"
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="moneylost/reminder/Label" unique_id=677799123]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -51.0
+offset_right = 524.0
+offset_bottom = -12.0
+theme_override_colors/font_color = Color(0.007843138, 0.003921569, 0.007843138, 1)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("5_yun4j")
+theme_override_font_sizes/font_size = 14
+text = "what should you remember?"
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="continuejourney" type="Panel" parent="moneylost" unique_id=1796757016]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 1.5910001
+offset_left = -239.0
+offset_top = 95.0
+offset_right = 291.0
+offset_bottom = 71.36
+theme_override_styles/panel = SubResource("StyleBoxFlat_cjm0y")
+
+[node name="text" type="Label" parent="moneylost/continuejourney" unique_id=605648664]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -11.5
+offset_right = 66.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5058824)
+theme_override_fonts/font = ExtResource("4_ccscm")
+text = "continue journey"
+
+[node name="Button3" type="Button" parent="moneylost/continuejourney" unique_id=1262249146]
+layout_mode = 0
+offset_right = 530.0
+offset_bottom = 41.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ul8a6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_41217")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nb8vq")
+
+[node name="smartmovepanel" type="Panel" parent="." unique_id=1971084849]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.0
+offset_top = -166.5
+offset_right = 243.0
+offset_bottom = 166.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_03hge")
+
+[node name="checkpanel" type="Panel" parent="smartmovepanel" unique_id=738789975]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49500003
+anchor_top = 0.215
+anchor_right = 0.49500003
+anchor_bottom = 0.215
+offset_left = -36.570023
+offset_top = -34.095
+offset_right = 36.429977
+offset_bottom = 34.405
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w20tv")
+
+[node name="Checklist" type="Sprite2D" parent="smartmovepanel/checkpanel" unique_id=1195619615]
+position = Vector2(39, 31)
+scale = Vector2(0.984375, 1.203125)
+texture = ExtResource("9_ul8a6")
+
+[node name="smartmovetext" type="Label" parent="smartmovepanel" unique_id=395693448]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.46500003
+anchor_right = 0.5
+anchor_bottom = 0.46500003
+offset_left = -73.0
+offset_top = -14.3450165
+offset_right = 80.0
+offset_bottom = 8.6549835
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.17254902, 0.25882354, 0.39215687, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.18039216)
+theme_override_fonts/font = ExtResource("5_yun4j")
+theme_override_font_sizes/font_size = 17
+text = "SMART MOVE."
+
+[node name="text" type="Label" parent="smartmovepanel" unique_id=1737770518]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="continuepanel" type="Panel" parent="smartmovepanel" unique_id=912499573]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -171.0
+offset_top = -99.5
+offset_right = 171.0
+offset_bottom = -50.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mr5mp")
+
+[node name="continue" type="Label" parent="smartmovepanel/continuepanel" unique_id=1437800515]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -11.5
+offset_right = 41.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95276207, 0.9457632, 0.9419831, 1)
+theme_override_fonts/font = ExtResource("4_ccscm")
+text = "CONTINUE"
+
+[node name="Button4" type="Button" parent="smartmovepanel/continuepanel" unique_id=1467682143]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 342.0
+offset_bottom = 50.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_7u8qs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rrstb")
 
 [connection signal="pressed" from="CanvasLayer/ui/paynow" to="." method="_on_paynow_pressed"]
 [connection signal="pressed" from="CanvasLayer/ui/buy1ketoprak" to="." method="_on_buy_1_ketoprak_pressed"]
 [connection signal="toggled" from="CanvasLayer/ui/buy1ketoprak" to="." method="_on_buy_1_ketoprak_toggled"]
 [connection signal="body_entered" from="interactionarea" to="." method="_on_interactionarea_body_entered"]
 [connection signal="body_exited" from="interactionarea" to="." method="_on_interactionarea_body_exited"]
+[connection signal="pressed" from="qrpopup/paynow/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="qrpopup/check/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="moneylost/continuejourney/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="smartmovepanel/continuepanel/Button4" to="." method="_on_button_4_pressed"]

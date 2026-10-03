@@ -79,3 +79,25 @@ func _on_buy_1_ketoprak_pressed() -> void:
 
 
 	
+
+
+func _on_paynow_pressed() -> void:
+	$"qrpopup".show()
+	
+
+
+func _on_button_1_pressed() -> void:
+	$"moneylost".show()
+	$"qrpopup".hide()
+
+
+func _on_button_2_pressed() -> void:
+	$"smartmovepanel".show()
+	$"qrpopup".hide()
+
+
+func _on_button_4_pressed() -> void:
+	SceneTransition.change_scene("res://scenes/scene_3.tscn")
+
+func _on_button_3_pressed() -> void:
+	SceneTransition.change_scene("res://scenes/scene_3.tscn")

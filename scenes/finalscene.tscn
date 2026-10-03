@@ -1,31 +1,28 @@
-[gd_scene format=3 uid="uid://fiykq0u1rshk"]
+[gd_scene format=3 uid="uid://ykf041dpiuf2"]
 
-[ext_resource type="Texture2D" uid="uid://cqobfcxlsao4" path="res://assets/backgrounds/Scene 1(blurry).png" id="1_gafq3"]
-[ext_resource type="Script" uid="uid://dhn7p0x8q2r3s" path="res://scenes/opening.gd" id="1_y6ged"]
-[ext_resource type="FontFile" uid="uid://bbchvx2mh7yc" path="res://assets/fonts/Silkscreen/Silkscreen-Regular.ttf" id="2_y6ged"]
-[ext_resource type="Script" uid="uid://db3vxe24ibyx1" path="res://scenes/title.gd" id="4_fvetl"]
-[ext_resource type="Script" uid="uid://duatbvrn3ootw" path="res://scenes/tagline.gd" id="5_jo2c7"]
-[ext_resource type="Script" uid="uid://ddj1cdhm4q2bg" path="res://scenes/startbutton.gd" id="6_drfco"]
+[ext_resource type="Texture2D" uid="uid://cqobfcxlsao4" path="res://assets/backgrounds/Scene 1(blurry).png" id="2_6uia8"]
+[ext_resource type="FontFile" uid="uid://bbchvx2mh7yc" path="res://assets/fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_j0c52"]
+[ext_resource type="Script" uid="uid://db3vxe24ibyx1" path="res://scenes/title.gd" id="4_4uf2b"]
+[ext_resource type="Script" uid="uid://dq20t8l55dprl" path="res://scenes/longtext.gd" id="4_ub0kw"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uj04i"]
-bg_color = Color(0.94509804, 0.92156863, 0.91764706, 0.9372549)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8f85w"]
+bg_color = Color(0.8879926, 0.88799256, 0.8879925, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
 border_color = Color(0.16862746, 0.23137255, 0.3882353, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fj005"]
 bg_color = Color(0.9365188, 0.93808067, 0.94623023, 1)
 
-[node name="opening" type="Control" unique_id=739953680]
+[node name="final" type="Control" unique_id=739953680]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_y6ged")
 
 [node name="background" type="TextureRect" parent="." unique_id=92878317]
 layout_mode = 1
@@ -34,7 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_gafq3")
+texture = ExtResource("2_6uia8")
 
 [node name="title" type="Label" parent="." unique_id=1922196091]
 texture_filter = 1
@@ -44,43 +41,21 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -179.0
-offset_top = -49.5
-offset_right = 179.0
-offset_bottom = 49.5
+offset_left = -556.0
+offset_top = -273.0
+offset_right = 555.0
+offset_bottom = -176.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.91248363, 0.90110683, 0.8965621, 1)
 theme_override_colors/font_outline_color = Color(0.16862746, 0.23137255, 0.3882353, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("2_y6ged")
-theme_override_font_sizes/font_size = 78
-text = "SCAMLESS"
+theme_override_fonts/font = ExtResource("3_j0c52")
+theme_override_font_sizes/font_size = 54
+text = "Thank you for playing"
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("4_fvetl")
-
-[node name="tagline" type="Label" parent="." unique_id=455754195 node_paths=PackedStringArray("title_label")]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.586
-anchor_right = 0.5
-anchor_bottom = 0.586
-offset_left = -122.0
-offset_top = -11.728027
-offset_right = 116.0
-offset_bottom = 11.271973
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_outline_color = Color(0.16862746, 0.23137255, 0.3882353, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_y6ged")
-text = "Think Before You Trust"
-horizontal_alignment = 1
-script = ExtResource("5_jo2c7")
-title_label = NodePath("../title")
+script = ExtResource("4_4uf2b")
 
 [node name="aboutbutton" type="Button" parent="." unique_id=1412763982]
 texture_filter = 1
@@ -92,32 +67,35 @@ anchor_bottom = 0.080000006
 offset_left = 0.50390625
 offset_bottom = 0.15999603
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("2_y6ged")
+theme_override_fonts/font = ExtResource("3_j0c52")
 text = "ⓘ ABOUT"
 icon_alignment = 1
 vertical_icon_alignment = 2
 
-[node name="startbutton" type="Button" parent="." unique_id=236777756 node_paths=PackedStringArray("tagline_label")]
+[node name="eval" type="Panel" parent="." unique_id=79666423]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 174.0
+offset_right = 918.0
+offset_bottom = 545.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8f85w")
+
+[node name="longtext" type="Label" parent="eval" unique_id=322566564]
 texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.45600003
-anchor_top = 0.625
-anchor_right = 0.54
-anchor_bottom = 0.693
-offset_left = -0.31201172
-offset_right = -0.08001709
-offset_bottom = -0.06402588
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.10617893, 0.22964081, 0.321411, 1)
-theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0.3137255)
-theme_override_colors/font_outline_color = Color(0.542318, 0.542318, 0.542318, 1)
-theme_override_fonts/font = ExtResource("2_y6ged")
-theme_override_styles/normal = SubResource("StyleBoxFlat_uj04i")
-text = "START"
-script = ExtResource("6_drfco")
-tagline_label = NodePath("../tagline")
+layout_mode = 0
+offset_left = 22.0
+offset_top = 13.0
+offset_right = 651.0
+offset_bottom = 358.0
+theme_override_colors/font_color = Color(0.16862746, 0.23137255, 0.3882353, 1)
+theme_override_font_sizes/font_size = 18
+text = "Phishing isn't a rare threat 3.4 billion emails are sent every day, and 43% of people who think they can spot one still fall for it. The damage goes  beyond money.  Victims lose confidence in digital platforms, withdraw    from the systems modern life depends on, and often   stay silent, which is why only 7% of scams get reported. 
+
+Phishing doesn't just empty accounts  it erodes trust. Learning to pause, verify, and respond isn't a  niche skill it's something we all need in everyday life. The   pause you practiced here is the same one that protects     you out there."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+script = ExtResource("4_ub0kw")
 
 [node name="aboutpopup" type="Panel" parent="." unique_id=776791088]
 visible = false
@@ -149,7 +127,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 0.5137255)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.52156866)
-theme_override_fonts/font = ExtResource("2_y6ged")
+theme_override_fonts/font = ExtResource("3_j0c52")
 theme_override_font_sizes/font_size = 12
 text = "ABOUT SCAMLESS"
 
@@ -162,7 +140,7 @@ offset_right = 467.0
 offset_bottom = 86.0
 theme_override_colors/font_color = Color(0.2629222, 0.347426, 0.60533, 1)
 theme_override_colors/font_shadow_color = Color(0.07815645, 0.078156464, 0.078156434, 0.90588236)
-theme_override_fonts/font = ExtResource("2_y6ged")
+theme_override_fonts/font = ExtResource("3_j0c52")
 theme_override_font_sizes/font_size = 20
 text = "Think Before You Trust."
 
@@ -182,7 +160,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.99014336, 0.9633942, 0.9345881, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.56078434)
-theme_override_fonts/font = ExtResource("2_y6ged")
+theme_override_fonts/font = ExtResource("3_j0c52")
 theme_override_font_sizes/font_size = 12
 text = "SCAMLESS is an interactive game designed to help people recognize digital scams in everyday situations.
 
@@ -209,5 +187,4 @@ grow_horizontal = 0
 text = "×"
 
 [connection signal="pressed" from="aboutbutton" to="." method="_on_aboutbutton_pressed"]
-[connection signal="pressed" from="startbutton" to="." method="_on_startbutton_pressed"]
 [connection signal="pressed" from="aboutpopup/exitabout" to="." method="_on_exitabout_pressed"]

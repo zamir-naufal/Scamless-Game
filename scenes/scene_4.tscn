@@ -1,0 +1,305 @@
+[gd_scene format=3 uid="uid://cwec3fott3w7r"]
+
+[ext_resource type="Script" uid="uid://dd4b0523g34mi" path="res://scenes/scene_3.gd" id="1_hyci5"]
+[ext_resource type="Texture2D" uid="uid://beqjgkpim3xbd" path="res://assets/backgrounds/Scene 1.png" id="2_4m5or"]
+[ext_resource type="PackedScene" uid="uid://b1yt0prwlu3wm" path="res://player/samuel.tscn" id="3_7viaw"]
+[ext_resource type="Texture2D" uid="uid://d3dt2nev3lqsx" path="res://icon.svg" id="4_niqgf"]
+[ext_resource type="FontFile" uid="uid://bbchvx2mh7yc" path="res://assets/fonts/Silkscreen/Silkscreen-Regular.ttf" id="5_3hk0k"]
+[ext_resource type="Texture2D" uid="uid://dpxfqw6jdfabc" path="res://assets/popups/popup.png" id="6_wjcmq"]
+[ext_resource type="FontFile" uid="uid://cqptm7jmtnhk5" path="res://assets/fonts/Silkscreen/Silkscreen-Bold.ttf" id="7_r3hp6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uj04i"]
+size = Vector2(1150, 77)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uj04i"]
+bg_color = Color(0.9558837, 0.9487534, 0.94385, 1)
+shadow_color = Color(0, 0, 0, 0.9019608)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ey11"]
+bg_color = Color(0.6, 0.6, 0.6, 0.007843138)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37lg0"]
+bg_color = Color(0.6, 0.6, 0.6, 0.19215687)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hecbn"]
+bg_color = Color(0.6, 0.6, 0.6, 0.34117648)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxsw8"]
+bg_color = Color(0.526434, 0.22278446, 0.28188267, 1)
+shadow_color = Color(0, 0, 0, 0.827451)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5viw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jc63w"]
+bg_color = Color(0.6, 0.6, 0.6, 0.23529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7h7mn"]
+bg_color = Color(0.6, 0.6, 0.6, 0.53333336)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7072"]
+bg_color = Color(0.95536214, 0.95274514, 0.9487551, 1)
+shadow_color = Color(0, 0, 0, 0.8235294)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpupq"]
+bg_color = Color(0.6, 0.6, 0.6, 0.015686275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0udnx"]
+bg_color = Color(0.6, 0.6, 0.6, 0.24705882)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2uf65"]
+bg_color = Color(0.6, 0.6, 0.6, 0.5019608)
+
+[node name="scene3" type="Control" unique_id=1053450266]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hyci5")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=218545955]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4m5or")
+expand_mode = 1
+
+[node name="samuel" parent="." unique_id=694367078 instance=ExtResource("3_7viaw")]
+texture_filter = 1
+position = Vector2(-210, -643)
+scale = Vector2(2, 2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1333334065]
+position = Vector2(359, 716)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1628968097]
+texture = ExtResource("4_niqgf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=60516815]
+position = Vector2(216, -28.5)
+shape = SubResource("RectangleShape2D_uj04i")
+
+[node name="popup1bank" type="Panel" parent="." unique_id=394748529]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -300.0
+offset_bottom = 100.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uj04i")
+
+[node name="nusabank" type="Label" parent="popup1bank" unique_id=1925900463]
+texture_filter = 1
+layout_mode = 0
+offset_left = 46.0
+offset_top = 11.0
+offset_right = 129.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.16816768, 0.23286855, 0.3863293, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.45882353)
+theme_override_fonts/font = ExtResource("5_3hk0k")
+text = "Nusa bank"
+
+[node name="securityalert" type="Label" parent="popup1bank" unique_id=974090301]
+texture_filter = 1
+layout_mode = 0
+offset_left = 50.0
+offset_top = 44.0
+offset_right = 200.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0.1136517, 0.16154179, 0.28152123, 0.8509804)
+theme_override_fonts/font = ExtResource("5_3hk0k")
+text = "security alert"
+
+[node name="Buttonpopup1" type="Button" parent="popup1bank" unique_id=1287591469]
+layout_mode = 0
+offset_right = 299.0
+offset_bottom = 100.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_4ey11")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_37lg0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hecbn")
+
+[node name="panelpopup2" type="Control" parent="." unique_id=475356171]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="panelpopup2" unique_id=1112608722]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -334.5
+offset_top = -213.5
+offset_right = 334.5
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_wjcmq")
+
+[node name="title" type="Label" parent="panelpopup2" unique_id=945475603]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.375
+anchor_top = -3.5500002
+anchor_right = -4.375
+anchor_bottom = -3.5500002
+offset_left = -68.0
+offset_top = -13.0
+offset_right = 68.0
+offset_bottom = 13.0
+theme_override_fonts/font = ExtResource("5_3hk0k")
+theme_override_font_sizes/font_size = 20
+text = "nusa bank"
+
+[node name="title2" type="Label" parent="panelpopup2" unique_id=504117656]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.375
+anchor_top = -3.5500002
+anchor_right = -4.375
+anchor_bottom = -3.5500002
+offset_left = -99.0
+offset_top = 74.0
+offset_right = 239.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0.16816768, 0.23286855, 0.3863293, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.30588236)
+theme_override_fonts/font = ExtResource("7_r3hp6")
+theme_override_font_sizes/font_size = 20
+text = "Unusual activity detected"
+
+[node name="securityalert" type="Label" parent="panelpopup2" unique_id=1660648278]
+texture_filter = 1
+layout_mode = 0
+offset_left = -273.0
+offset_top = -94.0
+offset_right = -190.0
+offset_bottom = -71.0
+theme_override_colors/font_color = Color(0.571099, 0.32599145, 0.3444798, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.31764707)
+theme_override_font_sizes/font_size = 13
+text = "security alert"
+
+[node name="text" type="Label" parent="panelpopup2" unique_id=1568308023]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.23700002
+anchor_top = 0.5
+anchor_right = 0.23700002
+anchor_bottom = 0.5
+offset_left = -282.48
+offset_top = -31.0
+offset_right = 282.52
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.09803922, 0.14509805, 0.2509804, 0.8901961)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.3529412)
+theme_override_fonts/font = ExtResource("5_3hk0k")
+theme_override_font_sizes/font_size = 14
+text = "we noticed a recent login attempt from an unfamiliar device. 
+
+to keep your account secure, please verify your identify."
+
+[node name="verifypanel" type="Panel" parent="panelpopup2" unique_id=1681993544]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.462
+anchor_top = 3.5500002
+anchor_right = 0.462
+anchor_bottom = 3.5500002
+offset_left = -298.48
+offset_top = -26.0
+offset_right = 298.52
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uxsw8")
+
+[node name="verifytext" type="Label" parent="panelpopup2/verifypanel" unique_id=554497166]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.5
+offset_top = -11.5
+offset_right = 53.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9590414, 0.955159, 0.95316654, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.40784314)
+theme_override_fonts/font = ExtResource("5_3hk0k")
+text = "verify anyway"
+
+[node name="verifybutton" type="Button" parent="panelpopup2/verifypanel" unique_id=102873442]
+layout_mode = 0
+offset_right = 597.0
+offset_bottom = 51.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_p5viw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jc63w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7h7mn")
+
+[node name="reportpanel" type="Panel" parent="panelpopup2" unique_id=730686018]
+layout_mode = 0
+offset_left = -278.0
+offset_top = 189.0
+offset_right = 318.0
+offset_bottom = 239.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q7072")
+
+[node name="reporttext" type="Label" parent="panelpopup2/reportpanel" unique_id=1557710149]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -11.5
+offset_right = 42.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.64739496, 0.647395, 0.6473949, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.3647059)
+theme_override_fonts/font = ExtResource("5_3hk0k")
+text = "report text"
+
+[node name="reportbutton" type="Button" parent="panelpopup2/reportpanel" unique_id=641437249]
+layout_mode = 0
+offset_right = 595.0
+offset_bottom = 50.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_vpupq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0udnx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2uf65")
+
+[connection signal="pressed" from="popup1bank/Buttonpopup1" to="." method="_on_buttonpopup_1_pressed"]
